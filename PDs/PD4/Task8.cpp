@@ -11,11 +11,18 @@ main()
 int x = 4, y = 2;
 system ("cls");
 maze();
-while(true)
+while(y < 18)
     {
     move (x, y);
     y = y+1;
-    if(y == 17) {y=2;}
+    if(y == 17) 
+{
+    while(y>1)
+    {
+    move (x, y);
+    y = y - 1;
+    }
+}
     }
 
 }
